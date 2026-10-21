@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heaven’s Gate</title>
+  <!-- Fonts are optional: the page falls back to Georgia when offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="viewport" id="viewport">
+
+  <!--
+    THE WORLD
+    One tall painted strip, 1600 x 4600 world units (assets/world.jpg), moved by the camera.
+      y    0 – 1150   Heaven: meadows on floating islands
+      y 1150 – 2050   the gate
+      y 2050 – 3350   the endless switchback staircase
+      y 3350 – 4600   the cloud sea, then Hell
+    The SVG on top holds everything that moves or changes.
+  -->
+  <div class="world" id="world">
+    <img class="plate" src="assets/world.jpg" alt="" style="top:0;height:4600px">
+
+    <svg id="stage" viewBox="0 0 1600 4600" width="1600" height="4600" aria-hidden="true">
+      <defs>
+        <!-- Light on the characters: warm gold near the gate and in Heaven, ember-red in Hell. -->
+        <filter id="f-tint-gold" x="-20%" y="-20%" width="140%" height="140%">
+          <feColorMatrix type="matrix" values="1.04 0 0 0 0.02  0 1.0 0 0 0.01  0 0 0.92 0 0  0 0 0 1 0"/>
+        </filter>
+        <filter id="f-tint-ember" x="-30%" y="-30%" width="160%" height="160%">
+          <feColorMatrix type="matrix" values="0.85 0.1 0 0 0.06  0 0.62 0 0 0  0 0 0.5 0 0  0 0 0 1 0" result="t"/>
+          <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="d"/>
+          <feFlood flood-color="#FF7A38" flood-opacity="0.8"/>
+          <feComposite in2="d" operator="in" result="rim"/>
+          <feGaussianBlur in="rim" stdDeviation="1.6" result="rb"/>
+          <feMerge><feMergeNode in="rb"/><feMergeNode in="t"/></feMerge>
+        </filter>
+        <filter id="f-tint-dusk" x="-20%" y="-20%" width="140%" height="140%">
+          <feColorMatrix type="matrix" values="0.88 0.04 0.06 0 0  0.02 0.84 0.08 0 0  0.04 0.04 0.98 0 0.02  0 0 0 1 0"/>
+        </filter>
+        <filter id="f-glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="f-blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+        <filter id="f-blur2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2"/></filter>
+
+        <radialGradient id="g-bloom">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+          <stop offset="0.35" stop-color="#FFF1C9" stop-opacity="0.8"/>
+          <stop offset="1" stop-color="#FFD98A" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="g-blood">
+          <stop offset="0" stop-color="#C21B0E" stop-opacity="1"/>
+          <stop offset="1" stop-color="#5A0805" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="g-sclera" cx="0.5" cy="0.4" r="0.6">
+          <stop offset="0" stop-color="#FFF8E3"/>
+          <stop offset="0.75" stop-color="#EBD39A"/>
+          <stop offset="1" stop-color="#B8913F"/>
+        </radialGradient>
+        <radialGradient id="g-iris" cx="0.5" cy="0.45" r="0.55">
+          <stop offset="0" stop-color="#FFD36A"/>
+          <stop offset="0.5" stop-color="#E07A1E"/>
+          <stop offset="1" stop-color="#6A1A08"/>
+        </radialGradient>
+        <radialGradient id="g-iris-red" cx="0.5" cy="0.45" r="0.55">
+          <stop offset="0" stop-color="#FF6A3A"/>
+          <stop offset="0.6" stop-color="#B0140A"/>
+          <stop offset="1" stop-color="#3A0402"/>
+        </radialGradient>
+        <radialGradient id="g-ember-glow">
+          <stop offset="0" stop-color="#FF8A3A" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#FF5A1A" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="g-mist">
+          <stop offset="0" stop-color="#F4EEE6" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#F4EEE6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="g-soft-gold">
+          <stop offset="0" stop-color="#FFF3CC" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#FFE29A" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="g-petal" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFF8E8"/>
+          <stop offset="1" stop-color="#E6C47A"/>
+        </linearGradient>
+        <linearGradient id="g-lava" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFC060"/>
+          <stop offset="0.15" stop-color="#F06A20"/>
+          <stop offset="1" stop-color="#5A1206"/>
+        </linearGradient>
+        <linearGradient id="g-spirit" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFFBEC"/>
+          <stop offset="0.6" stop-color="#FBE6B0"/>
+          <stop offset="1" stop-color="#EFC877"/>
+        </linearGradient>
+        <linearGradient id="g-frost" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#DDE6F0" stop-opacity="0"/>
+          <stop offset="0.45" stop-color="#DDE6F0" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#DDE6F0" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="g-stone" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#9C9AA4"/>
+          <stop offset="0.5" stop-color="#E6E0D6"/>
+          <stop offset="1" stop-color="#8E8C98"/>
+        </linearGradient>
+      </defs>
+
+      <g id="layer-heaven-extras"></g>     <!-- persistent: candy, flowers, trees, fish, moons -->
+      <g id="layer-heaven-residents"></g>  <!-- everyone the gate let in -->
+      <g id="layer-gate">
+        <g id="gate-aura"></g>             <!-- rings of light that pulse when the gate speaks -->
+        <ellipse id="gate-bloom" cx="800" cy="1660" rx="190" ry="270" fill="url(#g-bloom)"/>
+        <g id="door-left"><image href="assets/door-left.png" x="690" y="1418" width="110" height="464"/></g>
+        <g id="door-right"><g transform="translate(1600 0) scale(-1 1)"><image href="assets/door-left.png" x="690" y="1418" width="110" height="464"/></g></g>
+        <path id="gate-blood" d="M690,1880 L690,1530 A110,110 0 0 1 910,1530 L910,1880 Z" fill="url(#g-blood)"/>
+      </g>
+      <g id="layer-gate-extras"></g>       <!-- persistent: ducks on the gate, new eyes -->
+      <g id="layer-climb-extras"></g>      <!-- persistent: floating steps, flowers on the stairs -->
+      <g id="layer-hell-extras"></g>       <!-- persistent: volcanoes, towers, cracks, eyes -->
+      <g id="layer-lava"></g>
+      <g id="layer-hell-residents"></g>    <!-- everyone the gate refused -->
+      <g id="layer-creature"></g>          <!-- the visitor on the stairs -->
+      <g id="layer-ambient"></g>           <!-- butterflies, drifting mist, embers -->
+      <g id="layer-anomalies"></g>         <!-- persistent: things gravity has let go of -->
+      <g id="layer-fx"></g>                <!-- temporary particles -->
+    </svg>
+  </div>
+
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="wash" id="wash" aria-hidden="true"></div>
+  <div class="verdict-stamp" id="verdict-stamp" aria-hidden="true"></div>
+
+  <div class="hud-left">
+    <header class="masthead">
+      <h1>Heaven’s Gate</h1>
+      <p class="tally" id="tally">Nobody has climbed yet.</p>
+    </header>
+    <div class="controls">
+      <button type="button" class="arrive-btn" id="arrive-btn">A Soul Arrives</button>
+      <label class="brisk"><input type="checkbox" id="voices" checked> Voices</label>
+      <label class="brisk"><input type="checkbox" id="brisk"> Brisk (shorter pauses)</label>
+    </div>
+    <section class="ledger" aria-label="Previous judgements">
+      <h2>The ledger</h2>
+      <ol id="ledger-list"></ol>
+      <p class="ledger-empty" id="ledger-empty">Empty. The gate is waiting.</p>
+      <button type="button" class="quiet-btn" id="reset-btn">Begin a new eternity</button>
+    </section>
+  </div>
+
+  <aside class="visitor" id="visitor" hidden>
+    <p class="visitor-label">The visitor</p>
+    <p class="visitor-name" id="visitor-name"></p>
+    <p class="visitor-meta" id="visitor-meta"></p>
+  </aside>
+
+  <!-- Where the camera is, top to bottom. -->
+  <nav class="locator" aria-hidden="true">
+    <span class="loc-label" style="top:12%">Heaven</span>
+    <span class="loc-label" style="top:35%">The gate</span>
+    <span class="loc-label" style="top:58%">The stairs</span>
+    <span class="loc-label" style="top:89%">Hell</span>
+    <span class="loc-track"></span>
+    <span class="loc-dot" id="loc-dot"></span>
+  </nav>
+
+  <div class="subtitles" id="subtitles" aria-live="polite">
+    <p class="sub-where" id="sub-where"></p>
+    <p class="sub-text" id="sub-text"></p>
+  </div>
+
+</main>
+
+<!-- Plain scripts (no modules) so the page also works when opened straight from disk. -->
+<script src="js/geometry.js"></script>
+<script src="js/util.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/rig.js"></script>
+<script src="js/data.js"></script>
+<script src="js/world.js"></script>
+<script src="js/events.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/judgement.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

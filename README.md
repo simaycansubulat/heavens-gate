@@ -1,6 +1,5 @@
 # Heaven’s Gate
 
-A DTAD Nonsense Daemon prototype, painted in a soft storybook-animation style.
 
 A person or an animal climbs an endless switchback staircase through the clouds to a golden gate. The gate itself is the daemon. It has no face and no keeper: when it speaks, in a child’s voice, its doors part with every word, light pours out, and rings of shifting colour pulse from the arch. Its reasons are absurd, certain and a little sinister, and it contradicts itself. Admitted souls see the doors burst open in gold and walk into the light, and the camera follows them up into Heaven, a meadow on floating islands, where they stay. Refused souls see the gate flush red and slam, and the shockwave throws them off the platform and down into Hell, a burning ruined city, where they stay too.
 

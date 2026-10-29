@@ -989,7 +989,7 @@ window.HG = window.HG || {};
       /(evan|tom|nathan|aaron).*(premium|enhanced)/i,
       /david|mark|guy|fred|alex|bruce|ralph|male/i]
   };
-  const settings = { gate: { pitch: 1.0, rate: 0.78 }, god: { pitch: 0.55, rate: 0.94 } };
+  const settings = { gate: { pitch: 1.0, rate: 0.86 }, god: { pitch: 0.55, rate: 0.94 } };
   /* How she delivers each sentence: unhurried, like she has all eternity and you're wasting it.
    * Neural voices already talk fast, so her rate sits well under 1 and the pauses are generous.
    * Sooo slow on the "ugh", "ew" and "wow", a dry ironic lift on questions, and the last line,
@@ -1001,14 +1001,14 @@ window.HG = window.HG || {};
     .flatMap(s => { const m = s.match(/^([^,]{1,14}),\s+(.+)$/); return m && DRAWL.test(m[1]) && m[1].split(/\s+/).length <= 2 ? [m[1] + ',', m[2]] : [s]; });
   function delivery(s, i, n) {
     const words = s.split(/\s+/).length;
-    if (DRAWL.test(s) && words <= 3) return { rate: 0.66, pitch: 1.0 + U.rand(-0.02, 0.02) };
-    if (/\?$/.test(s)) return { rate: 0.76, pitch: 1.04 };
-    if (/!$/.test(s) && words <= 5) return { rate: 0.76, pitch: 1.03 };
-    if (i === n - 1 && n > 1) return { rate: 0.72, pitch: 0.97 };
-    return { rate: 0.79 + U.rand(-0.02, 0.02), pitch: 1.0 + U.rand(-0.02, 0.02) };
+    if (DRAWL.test(s) && words <= 3) return { rate: 0.72, pitch: 1.0 + U.rand(-0.02, 0.02) };
+    if (/\?$/.test(s)) return { rate: 0.84, pitch: 1.04 };
+    if (/!$/.test(s) && words <= 5) return { rate: 0.84, pitch: 1.03 };
+    if (i === n - 1 && n > 1) return { rate: 0.8, pitch: 0.97 };
+    return { rate: 0.86 + U.rand(-0.02, 0.02), pitch: 1.0 + U.rand(-0.02, 0.02) };
   }
   /* The silence before each sentence: a long beat before the insult, a little one after a drawl. */
-  const pause = (parts, i) => i === parts.length - 1 && parts.length > 1 ? 700 : DRAWL.test(parts[i - 1]) ? 420 : 300;
+  const pause = (parts, i) => i === parts.length - 1 && parts.length > 1 ? 560 : DRAWL.test(parts[i - 1]) ? 320 : 200;
   const cache = {};
 
   function pick(kind) {
@@ -3433,7 +3433,7 @@ window.HG = window.HG || {};
     p.textContent = '';
     for (let i = 1; i <= text.length; i++) {
       p.textContent = text.slice(0, i);
-      await new Promise(r => setTimeout(r, (voice === 'god' ? 34 : 38) * U.speed));
+      await new Promise(r => setTimeout(r, (voice === 'god' ? 34 : 32) * U.speed));
     }
     await spoken;
   };

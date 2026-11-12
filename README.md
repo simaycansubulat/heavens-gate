@@ -35,7 +35,9 @@ Every thought costs your daemon something visible. A candle burns out, water dra
 
 ### Concept
 
-Heaven's Gate is the spirit of a golden gate at the top of an endless staircase in the clouds. Every dead soul climbs up to her, and she decides where they go: a meadow of floating islands, or a burning ruined city. She is not wise and not fair. She is a bored popular girl who has seen too many faces today, so her reasons change with every soul. Sometimes she is sure she knows you from a past life, or mistakes you for her ex. Every verdict sets off one event, like candy rain in Heaven, that stays for the next soul. The constraint is why she is so shallow: thinking costs her, so she allows herself one look, one guess and one verdict. She orders you to smile or come closer but never checks whether you did, because checking would cost another thought.
+Concept (100 to 150 words, no technical terms). What your daemon is, how it reads the theme, where the constraint really bites.
+
+[Your concept]
 
 ### Perceive, think, act
 
@@ -46,15 +48,39 @@ Heaven's Gate is the spirit of a golden gate at the top of an endless staircase 
 
 ### One visitor
 
-It is 3 a.m. in Weimar. Lena, an architecture student, has a jury at ten and a model that is still missing its roof. She opens a link a friend sent her: "You are dead." Fair enough. She chooses Face the gate and allows the camera. A golden gate waits at the top of the stairs and bursts out laughing before Lena says anything. "Red nails at three in the morning? Devil much?" Lena looks at her hands. The gate squints: "Hold on. I know you. Were you a pigeon? You stole a sandwich in 1987." Then an order: "Come closer." Lena leans in. The gate doesn't say whether that helped. A pause, a sigh: "Hell. Honestly, you'll like it." A deep voice announces that it has started raining ash on the burning city, and the ash stays there. Lena is offended, then laughs, then reloads to try again. The gate remembers her lines and says something new. Lena takes away a strange feeling of having been looked at closely by something that did not care at all, and a screenshot for the group chat.
+One visitor (100 to 200 words). A short story about one person or creature who meets your daemon.
+
+[Your story]
 
 ## How to use it
 
-1. Open the live demo in Chrome or Edge, with sound on. You see a warning: you are dead, and two options.
-2. Choose **Face the gate** and allow the camera. The gate looks at you, comments on one thing she sees, maybe has one of her moments, and gives you an order.
-3. She gives her verdict. Your soul goes to Heaven or Hell, and a narrator announces the event your verdict caused there. The event stays in the world.
-4. Or choose **Choose your character**: pick a person or an animal, watch them climb the stairs, and answer her questions.
-5. Tips: wear something colourful, hold an object up to the camera, play late at night, and reload a few times. She remembers what she has said and keeps finding new things. Untick **Voices** to play silently; the subtitles always show what she says.
+1. Open the live demo in Chrome or Edge, with sound on. You see the painted afterlife: Heaven above, the gate in the middle, an endless staircase, and Hell below.
+2. Click **A Soul Arrives**. A caution sign tells you that you are dead, and you choose how to meet the gate.
+
+**Option 1: Face the gate**
+
+3. Allow the camera (or click **Skip the camera**). You are already standing in front of her, so there is no climb.
+4. She looks at you. Sometimes she bursts out laughing at your face first. Then she comments on one thing she sees, maybe has one of her moments (déjà vu, mistaken identity, a crush on your plant), and gives you an order like "Smile. Big smile." She never checks whether you did it.
+5. She gives her verdict.
+
+**Option 2: Choose your character**
+
+3. Pick who you were from the row of characters: a gardener, a woman in a green dress, an old man, an old woman, a woman in a yellow raincoat, a bearded man, a gentleman in a top hat, or one of the animals.
+4. Watch your character climb the endless staircase up to the gate.
+5. She wakes up in a mood and asks you two or three questions. Click your answers. She judges you anyway. About one time in five she can't be bothered and lets you choose Heaven or Hell yourself.
+6. She gives her verdict.
+
+**After the verdict (both options)**
+
+- The soul goes to Heaven or Hell, and a narrator announces the event the verdict caused there ("It started to rain candy in Heaven."). The event stays in the world.
+- The soul is added to **Previous Sins**. Click **A Soul Arrives** again for the next soul, or **Begin a new eternity** to start over.
+
+**Tips**
+
+- Face the gate: wear something colourful, hold an object up to the camera, and try it late at night.
+- Choose your character: try different characters and answers. Her mood changes from soul to soul.
+- Play several rounds and reload. She remembers what she has said and keeps finding new things.
+- Untick **Voices** to play silently; the subtitles always show what she says. Tick **Brisk** for shorter pauses.
 
 ## Technical implementation
 

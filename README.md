@@ -48,9 +48,7 @@ Concept (100 to 150 words, no technical terms). What your daemon is, how it read
 
 ### One visitor
 
-One visitor (100 to 200 words). A short story about one person or creature who meets your daemon.
-
-[Your story]
+It is a slow night at the top of the endless staircase, and the gate is bored. Then a chicken hops up and stops in front of her. A card appears: Sir Reginald, a chicken. "Hi, Sir Reginald. Cute name. Shame about the rest. This is Heaven's Gate." Sir Reginald tilts his head. The gate squints: "Wait. Were you a pigeon? 1987? You stole a sandwich." He has stolen many sandwiches, but never as a pigeon. The gate thinks about asking him questions, but every thought costs her, and she is tired. She sighs: "Ugh, I can't be bothered. Heaven or Hell, you pick." He hops towards Heaven, offended that it was that easy. It starts to rain candy over the floating islands. The gate has already forgotten him.
 
 ## How to use it
 

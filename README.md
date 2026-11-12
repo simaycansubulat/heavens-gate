@@ -89,9 +89,7 @@ You can also just double-click `index.html`, but serving it from localhost makes
     <li>"For option 1, face the gate: after choosing it, the player opens the camera and the gate judges the player."</li>
     <li>"You can ask them to shake their head, smile or come closer, but don't comment on it, because you can't really tell."</li>
   </ol>
-- **Reflection** (150 words at most): What unlocked progress? Where did the agent get stuck or go sideways? What would you do differently next time?
-
-  What unlocked progress was telling the agent exactly which moments I loved and learned lines like that. The agent went sideways when it pretended to see more than the camera can: it commented on smiles and tables that weren't there, and on whether people obeyed. The fix was to accept the limits of her eyes and make them part of her character: she gives orders but never checks. It also repeated lines a lot and her voice sounded robotic until I described her as a real. Next time I would decide what the daemon can and cannot perceive on day one, and set up the live link from the start, since I tested everything there.
+- **Reflection:** Progress came when I stopped asking for features and started describing her: a bored mean girl, not a robot. Concrete examples also helped. When the gate noticed my red nails and that it was the middle of the night, I told the agent this was exactly right, and it wrote more lines in that spirit. The agent went sideways when it pretended to see more than a camera can: it commented on smiles, tables and whether people obeyed, and it repeated the same lines. Her voice also sounded robotic for a long time. The fix was to accept the limits of her eyes and make them part of her character: she gives orders but never checks. Next time I would decide on day one what the daemon can perceive and how the constraint shows on screen, and test on the live link from the start.
 
 ## Credits, assets, licenses
 

@@ -54,11 +54,10 @@ One visitor (100 to 200 words). A short story about one person or creature who m
 
 ## How to use it
 
-1. Open the live demo in Chrome or Edge with sound on, and click **A Soul Arrives**.
-2. **Face the gate:** allow the camera. She comments on what she sees, gives you an order and judges you.
-3. **Choose your character:** pick a person or an animal, watch them climb, and answer her questions.
-4. After each verdict, a narrator announces an event in Heaven or Hell that stays in the world. Click **A Soul Arrives** for the next soul.
-5. Tips: wear something colourful, hold an object up to the camera, and play several rounds. She remembers what she has said.
+- Open the live demo in Chrome or Edge with sound on. You see the painted afterlife: Heaven above, a gate on the clouds, an endless staircase, and Hell below.
+- Click **A Soul Arrives**. A caution sign tells you that you are dead, and you choose **Face the gate** or **Choose your character**.
+- Face the gate: allow the camera, and she comments on what she sees, gives you an order and judges you. Choose your character: pick a person or an animal, watch them climb, and answer her questions. Either way, the verdict sets off an event in Heaven or Hell that stays in the world.
+- Tips: wear something colourful, hold an object up to the camera, and play several rounds. She remembers what she has said and keeps finding new things.
 
 ## Technical implementation
 

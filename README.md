@@ -91,7 +91,7 @@ You can also just double-click `index.html`, but serving it from localhost makes
   </ol>
 - **Reflection** (150 words at most): What unlocked progress? Where did the agent get stuck or go sideways? What would you do differently next time?
 
-  What unlocked progress was telling the agent exactly which moments I loved. When the gate noticed my red nails and that it was the middle of the night, I said so, and it learned to write more lines like that. The agent went sideways when it pretended to see more than the camera can: it commented on smiles and tables that weren't there, and on whether people obeyed. The fix was to accept the limits of her eyes and make them part of her character: she gives orders but never checks. It also repeated lines a lot and her voice sounded robotic until I described her as a real mean girl. Next time I would decide what the daemon can and cannot perceive on day one, and set up the live link from the start, since I tested everything there.
+  What unlocked progress was telling the agent exactly which moments I loved and learned lines like that. The agent went sideways when it pretended to see more than the camera can: it commented on smiles and tables that weren't there, and on whether people obeyed. The fix was to accept the limits of her eyes and make them part of her character: she gives orders but never checks. It also repeated lines a lot and her voice sounded robotic until I described her as a real. Next time I would decide what the daemon can and cannot perceive on day one, and set up the live link from the start, since I tested everything there.
 
 ## Credits, assets, licenses
 

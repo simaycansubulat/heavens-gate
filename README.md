@@ -35,7 +35,7 @@ Every thought costs your daemon something visible. A candle burns out, water dra
 
 ### Concept
 
-My daemon is the spirit of a gate at the top of a staircase in the clouds, between Heaven and Hell. Every soul who dies has to climb up to her, and she decides where they go. She reads the theme in the worst possible way. She is a bored mean girl, so her reasons change with every soul: your face, your hair, the hour, or a feeling that you were once a pigeon. The constraint is why she judges so quickly. Every thought costs her something visible: with each one, something has to happen in Heaven or in Hell, like candy rain over the floating islands. So she spends as few thoughts as possible: one look, one guess, one verdict.
+My daemon is the spirit of a gate at the top of a staircase in the clouds, between Heaven and Hell. Every soul who dies has to climb up to her, and she decides where they go. She reads the theme in the worst possible way. She is a bored mean girl, so her reasons change with every soul: your face, your hair, the hour, or a feeling that you were once a pigeon. The constraint is why she judges so quickly. Every thought costs her something visible: with each one, something has to happen in Heaven or in Hell, like candy rain over the floating islands. So she spends as few thoughts as possible: one look, one guess, one verdict. Sometimes she can't even be bothered and lets the soul choose for itself.
 
 ### Perceive, think, act
 

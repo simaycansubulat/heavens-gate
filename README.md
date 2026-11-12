@@ -1,6 +1,6 @@
 # Heaven's Gate
 
-A bored golden gate that judges dead souls through your webcam and sends them to Heaven or Hell.
+A bored gate judges the dead, you on webcam or a character you pick, sending each to Heaven or Hell.
 
 ## Author and course
 

@@ -82,15 +82,17 @@ You can also just double-click `index.html`, but serving it from localhost makes
 
 ## Working with AI
 
-- **Coding agent used:** Claude Code, model Claude Opus 5.5
-- **Key prompts:**
-  1. "After the 'hello, you're dead' text I want 2 options: 1. face the gate and 2. choose your character."
-  2. "For option 1, face the gate: after choosing it, the player opens the camera and the gate judges the player."
-  3. "In the camera you will mostly see only the person's face, so judge that: hair, eyes, general vibe, nails, a colour on their shirt. If the camera doesn't see a table, don't mention a table."
-  4. A list of her "moments" to mix in: déjà vu ("Were you a pigeon? You stole a sandwich."), mistaken identity ("Is that Beyoncé? No. Ugh."), "I'm not ready, don't look."
-  5. "You can ask them to shake their head, smile or come closer, but don't comment on it, because you can't really tell."
+Coding agents used: Claude Code, model Claude Opus 5.5
 
-### Reflection
+Key prompts (two to five that really moved the project):
+
+1. "After the 'hello, you're dead' text I want 2 options: 1. face the gate and 2. choose your character."
+2. "For option 1, face the gate: after choosing it, the player opens the camera and the gate judges the player."
+3. "In the camera you will mostly see only the person's face, so judge that: hair, eyes, general vibe, nails, a colour on their shirt. If the camera doesn't see a table, don't mention a table."
+4. A list of her "moments" to mix in: déjà vu ("Were you a pigeon? You stole a sandwich."), mistaken identity ("Is that Beyoncé? No. Ugh."), "I'm not ready, don't look."
+5. "You can ask them to shake their head, smile or come closer, but don't comment on it, because you can't really tell."
+
+Reflection (150 words at most): What unlocked progress? Where did the agent get stuck or go sideways? What would you do differently next time?
 
 What unlocked progress was telling the agent exactly which moments I loved. When the gate noticed my red nails and that it was the middle of the night, I said so, and it learned to write more lines like that. The agent went sideways when it pretended to see more than the camera can: it commented on smiles and tables that weren't there, and on whether people obeyed. The fix was to accept the limits of her eyes and make them part of her character: she gives orders but never checks. It also repeated lines a lot and her voice sounded robotic until I described her as a real mean girl. Next time I would decide what the daemon can and cannot perceive on day one, and set up the live link from the start, since I tested everything there.
 

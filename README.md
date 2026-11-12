@@ -87,8 +87,6 @@ You can also just double-click `index.html`, but serving it from localhost makes
   <ol type="a">
     <li>"After the 'hello, you're dead' text I want 2 options: 1. face the gate and 2. choose your character."</li>
     <li>"For option 1, face the gate: after choosing it, the player opens the camera and the gate judges the player."</li>
-    <li>"In the camera you will mostly see only the person's face, so judge that: hair, eyes, general vibe, nails, a colour on their shirt. If the camera doesn't see a table, don't mention a table."</li>
-    <li>A list of her "moments" to mix in: déjà vu ("Were you a pigeon? You stole a sandwich."), mistaken identity ("Is that Beyoncé? No. Ugh."), "I'm not ready, don't look."</li>
     <li>"You can ask them to shake their head, smile or come closer, but don't comment on it, because you can't really tell."</li>
   </ol>
 - **Reflection** (150 words at most): What unlocked progress? Where did the agent get stuck or go sideways? What would you do differently next time?
